@@ -33,20 +33,12 @@
         }
         .form-group input[type="text"],
         .form-group input[type="date"],
-        .form-group input[type="file"],
         .form-group select {
             width: 100%;
             padding: 8px;
             box-sizing: border-box;
             border: 1px solid #ddd;
             border-radius: 4px;
-        }
-        .form-group input[type="file"] {
-            padding: 3px;
-        }
-        .form-group input[type="file"].photo-input {
-            border: none;
-            padding: 0;
         }
         .form-group input[type="submit"] {
             background-color: #4CAF50;
@@ -69,7 +61,7 @@
 <body>
     <div class="container">
         <h1>Formulário de Inscrição</h1>
-        <form action="https://formspree.io/f/mjkbzjao" method="POST" enctype="multipart/form-data">
+        <form action="https://formspree.io/f/mjkbzjao" method="POST">
             <div class="form-group">
                 <label for="nome">Nome Completo</label>
                 <input type="text" id="nome" name="nome" required>
@@ -83,12 +75,12 @@
                 <input type="text" id="endereco" name="endereco" required>
             </div>
             <div class="form-group">
-                <label for="documento">Data de Nascimento, RG ou CPF</label>
-                <input type="file" id="documento" name="documento" accept=".jpg, .jpeg, .png" required>
+                <label for="documento-link">Link para Documento (RG ou CPF)</label>
+                <input type="text" id="documento-link" name="documento-link" required>
             </div>
             <div class="form-group">
-                <label for="foto-3x4">Foto 3×4 do Candidato</label>
-                <input type="file" id="foto-3x4" name="foto-3x4" accept=".jpg, .jpeg, .png" class="photo-input" required>
+                <label for="foto-3x4-link">Link para Foto 3×4</label>
+                <input type="text" id="foto-3x4-link" name="foto-3x4-link" required>
             </div>
             <div class="form-group">
                 <label for="responsaveis">Nome dos Responsáveis</label>
